@@ -7,6 +7,7 @@ from keras.preprocessing.image import load_img, img_to_array
 import numpy as np
 from VGGNet16 import VGGNet16Model
 from VGGNet19 import VGGNet19Model
+from ResNet50 import ResNet50Model
 
 app = Flask(__name__)
 
@@ -26,6 +27,8 @@ def predict_image(file_path, model_type):
         model = VGGNet16Model()
     elif model_type == 'vgg19':
         model = VGGNet19Model()
+    elif model_type == 'resnet50':
+        model = ResNet50Model()
     else:
         return "Invalid model type", 0
 
