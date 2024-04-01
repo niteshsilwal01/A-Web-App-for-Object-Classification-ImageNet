@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Classifier</title>
+</head>
+<body>
+    <h1>Image Classifier</h1>
+    <form action="/predict" method="POST" enctype="multipart/form-data">
+        <label for="image">Upload Image:</label>
+        <input type="file" id="image" name="image" accept="image/*"><br><br>
+        <label for="model">Select Model:</label>
+        <select id="model" name="model">
+            <option value="vgg16">VGGNet16</option>
+            <option value="vgg19">VGGNet19</option>
+        </select><br><br>
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
